@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root {
+    --primary-color: #03322a;
+    --bg-color: #F4F7F6;
+    --text-color: #333;
+    --border-color: #DDD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", "Segoe UI", SansSerif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+form{
+    padding:30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 7px 7px 12px rgba(0, 0, 0, 1);
+    width: 100%;
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus
+{
+    border-color: var(--primary-color);
+}
+
+form label:has(input[type="radio"]),
+label:has(input[type="checkbox"]) {
+
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 15px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+
+    margin-left: 5px;
+    vertical-align: middle;
+
+}
+
+input[type="color"]{
+
+    display: block;
+    width: 60px;
+    height: 40px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 2px;
+
+}
+
+
+
+
+
