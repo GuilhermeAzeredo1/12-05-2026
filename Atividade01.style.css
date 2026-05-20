@@ -5,6 +5,7 @@
     --primary-color: #03322a;
     --bg-color: #F4F7F6;
     --text-color: #333;
+    --text-color-button: white;
     --border-color: #DDD;
 }
 
@@ -35,7 +36,7 @@ form{
     padding:30px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 7px 7px 12px rgba(0, 0, 0, 1);
+    box-shadow: 7px 7px 12px #333;
     width: 100%;
     max-width: 500px;
 }
@@ -102,6 +103,29 @@ input[type="color"]{
 }
 
 
+input[type="button"] {
+    padding: 12px;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--text-color-button);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 20px;
+    font-weight: 600;
 
+}
+
+input[type="button"]:hover{
+    filter: brightness(90%);
+
+}
+
+input[type="button"]:active{
+    transform: scale(0.90);
+
+}
 
 
