@@ -6,16 +6,33 @@ const elementoCor = document.getElementById('elementoCor');
 elementoCor.addEventListener('input', (e) => {
     let corNova = e.target.value;
 
-    document.documentElement.style.setProperty('--primary-color', corNova);
+    localStorage.setItem('primaryColor',corNova);
+    document.documentElement.style.setProperty
+    ('--primary-color', corNova);
+
+
 });
 
-document.addEventListener('DOMContentLoaded', (e) =>
-{
+document.addEventListener('DOMContentLoaded', async () => {
+    if (localStorage.getItem('primaryColor')){
+        elementoCor.value = localStorage.getItem('primaryColor');
+
+        document.documentElement.style.setProperty
+        ('--primary-color', elementoCor.value);
+
+    } else {
+
+
+
    const rootStyles =
        window.getComputedStyle
        (document.documentElement);
 
    const primaryColor = rootStyles.getPropertyValue('--primary-color').trim();
+
+   elementoCor.value = primaryColor;
+
+    }
 });
 
 
